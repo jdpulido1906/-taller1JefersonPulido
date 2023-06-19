@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reto#1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon"href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4t1ABHdQ2BEwVFRJeVzmqp4IuEWaiJnOZ2w&usqp=CAU"type="image/x-icon"/>
+    <link rel="stylesheet" href="css/figuras.css" />
+    <script src="Javascript/palabras.js"></script>
+  </head>
+  <header>
+    <div class="logo-menu">
+      <div class="logo">
+        <img src="imagenes/logo.png" alt="Logo de Sena" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Retos</a></li>
+          <li><a href="cuadro.html">Ejemplos</a></li>
+          <li><a href="formulario.html">Formulario</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <div class="card">
+      <h3>Círculo</h3>
+      <button onclick="openModal('circle', 'perimeter')">Perímetro</button>
+      <button onclick="openModal('circle', 'area')">Área</button>
+    </div>
+    <div class="card">
+      <h3>Triángulo</h3>
+      <button onclick="openModal('triangle', 'perimeter')">Perímetro</button>
+      <button onclick="openModal('triangle', 'area')">Área</button>
+    </div>
+    <div class="card">
+      <h3>Rectángulo</h3>
+      <button onclick="openModal('rectangle', 'perimeter')">Perímetro</button>
+      <button onclick="openModal('rectangle', 'area')">Área</button>
+    </div>
+    <div class="card">
+      <h3>Cuadrado</h3>
+      <button onclick="openModal('square', 'perimeter')">Perímetro</button>
+      <button onclick="openModal('square', 'area')">Área</button>
+    </div>
+
+    <div id="modalPerimeter" class="modal">
+      <div id="contenidoModal">
+        <h1>Cálculo del Perímetro</h1>
+        <form>
+          <input type="text" id="inputPerimeter" placeholder="Valor 1" />
+          <button type="button" onclick="calculate('perimeter')">
+            Calcular
+          </button>
+        </form>
+        <div id="resultadoPerimeter">
+          <h3>Resultado:</h3>
+          <p id="perimeterResult"></p>
+        </div>
+        <span class="cerrarModal" onclick="closeModal('modalPerimeter')"
+          >&times;</span
+        >
+      </div>
+    </div>
+
+    <div id="modalArea" class="modal">
+      <div id="contenidoModal">
+        <h1>Cálculo del Área</h1>
+        <form>
+          <input type="text" id="inputArea" placeholder="Valor 1" />
+          <button type="button" onclick="calculate('area')">Calcular</button>
+        </form>
+        <div id="resultadoArea">
+          <h3>Resultado:</h3>
+          <p id="areaResult"></p>
+        </div>
+        <span class="cerrarModal" onclick="closeModal('modalArea')"
+          >&times;</span
+        >
+      </div>
+    </div>
+
+    <script src="Javascript/figurasGeometricas.js"></script>
+  </body>
+</html>

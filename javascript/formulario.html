@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4t1ABHdQ2BEwVFRJeVzmqp4IuEWaiJnOZ2w&usqp=CAU" type="image/x-icon" />
+    <link rel="stylesheet" href="css/formulario.css" />
+</head>
+<body>
+<header>
+    <div class="logo-menu">
+        <div class="logo">
+            <img src="imagenes/Logo.png" alt="Logo de sena" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Retos</a></li>
+                <li><a href="cuadro.html">Ejemplos</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<form class="caja" id="frmvalidacion" novalidate>
+    <h2>Registro de Usuario</h2>
+
+    <div id="camponoDoc">
+        <label for="tipo_documento">Tipo de documento:</label>
+        <select id="tipoDocumento" required>
+          <option value="">Seleccionar</option>
+          <option value="cedula">Cédula</option>
+          <option value="TI">Tarejeta de identidad</option>
+          <option value="pasaporte">Pasaporte</option>
+          
+      </select>
+    </div>
+
+    <div id="campoNoDoc">
+        <label for="Nodoc">No. Documento:</label>
+        <input type="text" id="Nodoc" name="Nodoc" class="Nodoc" />
+        <div class="feedback"></div>
+    </div>
+
+    <div id="campoNombre">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="" />
+        <div class="feedback"></div>
+    </div>
+
+    <div id="campoApellido">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" class="" />
+        <div class="feedback"></div>
+    </div>
+
+    <div id="campoFecha">
+        <label for="fecha_nacimiento">Fecha Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="" />
+        <div class="feedback"></div>
+    </div>
+
+    <div id="campoEmail">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" class="" />
+        <div class="feedback"></div>
+    </div>
+
+    <div id="campoPassword">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="" />
+        <div class="feedback"></div>
+    </div>
+
+    <div id="comprobar_password">
+        <label for="comprobar_password">Comprobar password:</label>
+        <input type="password" id="comprobar_password" name="comprobar_password" class="" />
+        <div class="feedback"></div>
+    </div>
+    <div id="aceptar_terminos">
+      <label for="aceptar_terminos">Aceptar Términos de uso:</label>
+      <input type="checkbox" id="aceptar_terminos_checkbox" name="aceptar_terminos" class="" />
+      <div class="feedback"></div>
+    </div>
+    
+    <input type="submit" value="Registrarse" />
+</form>
+<script src="Javascript/formulario.js"></script>
+
+</body>
+</html>

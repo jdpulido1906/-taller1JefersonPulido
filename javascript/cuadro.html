@@ -1,95 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title>Reto#1</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon"href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4t1ABHdQ2BEwVFRJeVzmqp4IuEWaiJnOZ2w&usqp=CAU"type="image/x-icon"/>
+    <title>Retos de Javascript</title>
+    <link rel="shortcut icon"href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4t1ABHdQ2BEwVFRJeVzmqp4IuEWaiJnOZ2w&usqp=CAU" type="image/x-icon"/>
     <link rel="stylesheet" href="css/sytle.css" />
-    <script src="Javascript/palabras.js"></script>
+    <script src="Javascript/demo.js"></script>
+    
   </head>
-  <body>
+  <body onload="agregarEventoEnfoque()">
     <header>
       <div class="logo-menu">
         <div class="logo">
-          <img src="imagenes/Logo.png" alt="Logo de Ford" />
+          <img src="imagenes/logo.png" alt="Logo de Sena" />
         </div>
         <nav>
           <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="catalogo.html">Retos</a></li>
             <li><a href="cuadro.html">Ejemplos</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
+      <h1>Eventos JavaScript</h1>
+    
       <table>
         <tr>
           <th>Evento</th>
           <th>Ejemplo de aplicación</th>
+          <th>Demostración</th>
         </tr>
         <tr>
-          <td>click</td>
-          <td>Agregar un botón que muestre un mensaje al hacer clic en él.</td>
-        </tr>
+          <tr>
+            <td>click</td>
+            <td>Se activa cuando se hace clic en un elemento</td>
+            <td>
+              <button onclick="handleClick()">Haz clic aquí</button>
+            </td>
+          </tr>
         <tr>
           <td>mouseover</td>
+          <td>para detectar cuando el cursor se coloca sobre la imagen y luego aplicamos la rotación 
+          </td>
           <td>
-            Cambiar el color de fondo de un elemento cuando el cursor pasa por
-            encima.
+            <img class="rotate-image" src="imagenes/mundo.jpeg" alt="Imagen">
+          </td>
+        </tr>
+      
+        <tr>
+          <td>focus</td>
+          <td>Cambiar el estilo de un campo de texto cuando recibe el enfoque.Esta se activa cuando le das click a la imagen</td>
+          <td><img src="imagenes/girasoles.jpg" alt="Imagen 1" tabindex="1" onclick="handleImageClick()" onfocus="handleImageFocus()" style="width: 200px; height: auto;">
+          </td>
+          <tr>
+            <td>hashchange</td>
+            <td>Se activa cuando cambia el fragmento de la URL (hash)</td>
+            <td>
+              <a href="#section1">Ir a la sección 1</a>
+            </td>
+          </tr>
           </td>
         </tr>
         <tr>
           <td>keydown</td>
+          <td>Se activa cuando se presiona una tecla</td>
           <td>
-            Detectar cuando una tecla es presionada en el teclado y realizar una
-            acción.
-          </td>
-        </tr>
-        <tr>
-          <td>submit</td>
-          <td>Validar un formulario antes de enviar los datos al servidor.</td>
-        </tr>
-        <tr>
-          <td>load</td>
-          <td>
-            Cargar contenido adicional en una página web una vez que se haya
-            cargado completamente.
-          </td>
-        </tr>
-        <tr>
-          <td>scroll</td>
-          <td>
-            Detectar cuando el usuario se desplaza por la página y realizar una
-            acción.
-          </td>
-        </tr>
-        <tr>
-          <td>mouseenter</td>
-          <td>
-            Mostrar un mensaje emergente cuando el cursor entra en un elemento.
-          </td>
-        </tr>
-        <tr>
-          <td>change</td>
-          <td>
-            Actualizar una lista desplegable cuando el usuario selecciona una
-            opción diferente.
+            <input type="text" id="myInput" onkeyup="handleKeyup(event)">
+            <p id="output"></p>
           </td>
         </tr>
         <tr>
           <td>contextmenu</td>
+          <td>Se activa cuando se hace clic con el botón derecho del mouse para abrir el menú contextual.</td>
+          <td oncontextmenu="handleContextMenu(event)">
+            Haz clic derecho aquí
+          </td>
+        </tr>
+
+        <tr>
+          <td>keyup</td>
+          <td>Se activa cuando se suelta una tecla</td>
+          <td><input type="text" id="myInput"></td>
+        </tr>
+        <tr>
+          <td>mouseup</td>
+          <td>Se activa cuando se suelta un botón del mouse</td>
           <td>
-            Mostrar un menú contextual al hacer clic con el botón derecho del
-            ratón.
+            <div style="width: 200px; height: 200px; background-color: lightblue;" onmouseup="handleMouseUp()"></div>
+          </td>
+        </tr>
+       
+        <tr>
+          <td>dragstart</td>
+          <td>Se activa cuando se inicia el arrastre de un elemento</td>
+          <td>
+            <img src="imagenes/internet.jpg" alt="Imagen" draggable="true" ondragstart="dragStart(event)" style="width: 200px; height: auto;">
+
           </td>
         </tr>
         <tr>
-          <td>dblclick</td>
-          <td>Detectar un doble clic en un elemento y realizar una acción.</td>
+          <td>beforeprint</td>
+          <td>Se activa antes de iniciar el proceso de impresión</td>
+          <td><button onclick="simularBeforePrint()">Simular evento</button></td>
         </tr>
+        
       </table>
+      <div id="section1" style="height: 100px; background-color: rgb(71, 238, 146);">
+        Sección 1
+        JavaScript es un lenguaje de programación de alto nivel, interpretado y orientado a objetos. Se utiliza principalmente para agregar interactividad y dinamismo a las páginas web. JavaScript permite a los desarrolladores crear scripts que se ejecutan en el navegador del cliente, lo que brinda una amplia gama de capacidades para interactuar con el contenido de la página, manipular elementos HTML, realizar validaciones de formularios, realizar peticiones al servidor, entre otras tareas.
+      </div>
+      
     </main>
   </body>
 </html>

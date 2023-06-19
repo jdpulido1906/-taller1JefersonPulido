@@ -130,150 +130,83 @@ nav a:hover {
   display: block;
 }
 
-main {
-  margin: 20px;
-  text-align: center;
+/* Estilos para el formulario */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 40px;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  background-color: #222;
+  box-shadow: 0px 0px 20px #00ff00;
 }
 
 h2 {
-  color: white;
+  color: #f1f1f1;
 }
 
-.container {
-  border: 2px solid #39ff14;
-  padding: 20px;
-  display: inline-block;
-  background-color: #000;
-}
-
-label {
+form label {
   display: block;
   margin-bottom: 10px;
-  color: #39ff14;
+  font-size: 14px;
+  color: #00ff00;
 }
 
-input[type="text"] {
-  padding: 5px;
-  width: 200px;
-}
-
-select {
-  padding: 5px;
-  width: 200px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #21d102;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-button:hover {
-  background-color: #00ff00;
-}
-table {
-  border-collapse: collapse;
+form input[type="text"],
+form input[type="password"],
+form input[type="date"],
+form input[type="number"],
+form input[type="email"],
+form select {
   width: 100%;
-  margin-top: 20px;
-}
-
-th,
-td {
-  border: 5px solid rgb(9, 184, 82); /* Cambia el grosor del borde a 2px */
-  padding: 8px;
-  
-}
-
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-img:focus {
-  border: 2px solid red;
-}
-/* Cart */
-.card {
-  width: 200px;
-  height: 150px;
-  border: 1px solid #2baf83;
   padding: 10px;
-  margin: 10px;
-  display: inline-block;
-  text-align: center;
-  background-color: #2baf83;
-}
-#ventanaModal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  width: 300px;
-  height: 200px;
-  background-color: #555;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  text-align: center;
-}
-
-footer {
-  background-color: #000;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #333;
   color: #fff;
-  text-align: center;
-  padding: 20px;
+  box-sizing: border-box;
 }
 
-.redes-sociales a {
+form input[type="checkbox"] {
   display: inline-block;
-  width: 30px;
-  height: 30px;
   margin-right: 10px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.icono-sena {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ34-CA11sS6fBk7XUo_Zu_O18e1AdSJ8XPA&usqp=CAU");
-}
-.zoomable {
-  transition: transform 0.3s ease;
-}
-
-.zoomable:hover {
-  transform: scale(1.5);
-}
-.rotate-image {
-  transition: transform 0.5s;
+form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ff00;
+  color: #fffdfd;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.rotate-image:hover {
-  transform: rotate(180deg);
+form input[type="submit"]:hover {
+  background-color: #009900;
 }
 
-.demo {
-  width: 50%;
+.feedback {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
-.section {
-  width: 50%;
-  height: 100px;
+.success {
+  border: 2px solid #00ff00;
 }
 
+.error {
+  border: 2px solid rgb(255, 0, 0);
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(159, 235, 191);
+}
