@@ -253,13 +253,7 @@ footer {
 .icono-sena {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ34-CA11sS6fBk7XUo_Zu_O18e1AdSJ8XPA&usqp=CAU");
 }
-.zoomable {
-  transition: transform 0.3s ease;
-}
 
-.zoomable:hover {
-  transform: scale(1.5);
-}
 .rotate-image {
   transition: transform 0.5s;
 }
