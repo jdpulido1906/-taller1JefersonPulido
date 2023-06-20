@@ -210,3 +210,23 @@ body {
   font-family: Arial, sans-serif;
   background-color: rgb(159, 235, 191);
 }
+/* Estilo para el Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icono-sena {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ34-CA11sS6fBk7XUo_Zu_O18e1AdSJ8XPA&usqp=CAU");
+}
